@@ -12,3 +12,4 @@ class Config:
     CACHE_REDIS_PORT = os.getenv("CACHE_REDIS_PORT")
     CACHE_REDIS_DB = os.getenv("CACHE_REDIS_DB")
     CACHE_DEFAULT_TIMEOUT = int(os.getenv("CACHE_DEFAULT_TIMEOUT"))
+    DEBUG = True
