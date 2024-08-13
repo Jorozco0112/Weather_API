@@ -12,9 +12,6 @@ def create_app():
     cache = Cache(app=app)
     cache.init_app(app=app)
 
-    # Initialize Redis client
-    redis_client = redis.Redis(host='localhost', port=6379, db=0)
-
     # Register Blueprints
     app.register_blueprint(weather_bp)
 
