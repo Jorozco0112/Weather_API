@@ -1,4 +1,5 @@
 from flask_restx import Api
+from flask_caching import Cache
 
 # Initialize Flask-RESTx
 api = Api(
@@ -6,3 +7,5 @@ api = Api(
     title="Weather API",
     description="A simple Weather API with caching",
 )
+
+cache = Cache()  # Initialize Cache
