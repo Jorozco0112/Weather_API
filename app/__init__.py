@@ -3,10 +3,10 @@ from .extensions import api, cache
 from .controller import weather_ns
 from .config import Config
 
-def create_app():
+def create_app(config_class=Config):
     app = Flask(__name__)
 
-    app.config.from_object(Config)
+    app.config.from_object(config_class)
 
     # Initialize the extensions
     api.init_app(app)
