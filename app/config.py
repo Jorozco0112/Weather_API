@@ -13,3 +13,8 @@ class Config:
     CACHE_REDIS_DB = os.getenv("CACHE_REDIS_DB")
     CACHE_DEFAULT_TIMEOUT = int(os.getenv("CACHE_DEFAULT_TIMEOUT"))
     DEBUG = True
+
+@dataclass
+class TestConfig(Config):
+    TESTING = True
+    CACHE_REDIS_HOST = "localhost"  # Use localhost for testing
